@@ -4,17 +4,18 @@
 
 #include "DigitalPulse.h"
 
-void DigitalPulseClass::init(int pinNumber)
+/// <summary>
+/// Initializes the specified pin number as a digital output.
+/// </summary>
+/// <param name="pinNumber">The pin number.</param>
+void DigitalPulseClass::init(eLedDigitalOutput pinNumber)
 {
-	digitalPinNumber = 13;
+	digitalPinNumber = pinNumber;
 
 	// initialize digital pin 13 as an output.
 	pinMode(digitalPinNumber, OUTPUT);
 	pinMode(7, OUTPUT);
 	pinMode(8, OUTPUT);	
-
-	if (pinNumber == 7 || pinNumber == 8)
-		digitalPinNumber = pinNumber;
 }
 
 // Sets pulse duration
@@ -31,13 +32,6 @@ boolean DigitalPulseClass::SetPulseDuration(float percentage)
 	return false;
 }
 
-void DigitalPulseClass::ChangePinNumber(int pinNumber)
-{
-	if (pinNumber == 7 || pinNumber == 8 || pinNumber == 13)
-	{
-		digitalPinNumber = pinNumber;
-	}
-}
 
 void DigitalPulseClass::Blink()
 {

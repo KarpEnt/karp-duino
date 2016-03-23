@@ -3,6 +3,8 @@
 #ifndef _DIGITALPULSE_h
 #define _DIGITALPULSE_h
 
+#include "eLedDigitalOutput.h"
+
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "arduino.h"
 #else
@@ -11,20 +13,23 @@
 
 class DigitalPulseClass
 {
- protected:
-	 int digitalPinNumber = 13;
+ private:
+	 eLedDigitalOutput digitalPinNumber = internal;
 
+ protected:
 	 const int period = 1000;
 	 int pulseLen = period/2;
 
  public:
-	void init(int pinNumber);
+	void init(eLedDigitalOutput pinNumber);
 
 	boolean SetPulseDuration(float percentage);
 
-	void ChangePinNumber(int pinNumber);
-
 	void Blink();
+
+	// Properties
+	eLedDigitalOutput getCurrentLED() const { return digitalPinNumber; }
+	void setCurrentLED(eLedDigitalOutput num) { digitalPinNumber = num; }
 
 };
 

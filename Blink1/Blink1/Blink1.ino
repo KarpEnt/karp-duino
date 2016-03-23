@@ -27,7 +27,7 @@ String errorMsg = "Podaj wypelnienie impulsu w procentach <0..100>.";
 void setup() {
 	Serial.begin(115200);
 	
-	DigitalPulse.init(13);
+	DigitalPulse.init(internal);
 }
 
 // the loop function runs over and over again forever
@@ -41,13 +41,13 @@ void loop() {
 		switch (c)
 		{
 		case 'c':
-			DigitalPulse.ChangePinNumber(7);
+			DigitalPulse.setCurrentLED(red);
 			break;
 		case 'z':
-			DigitalPulse.ChangePinNumber(8);
+			DigitalPulse.setCurrentLED(green);
 			break;
 		default:
-			DigitalPulse.ChangePinNumber(13);
+			DigitalPulse.setCurrentLED(internal);
 			break;
 		}
 
