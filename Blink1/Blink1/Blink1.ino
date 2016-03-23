@@ -1,16 +1,20 @@
 /*
-  Blink
-  Turns on an LED on for one second, then off for one second, repeatedly.
+  Blink1
+  Turns on an LED with brightness defined by console command.
 
-  Most Arduinos have an on-board LED you can control. On the Uno and
-  Leonardo, it is attached to digital pin 13. If you're unsure what
-  pin the on-board LED is connected to on your Arduino model, check
-  the documentation at http://arduino.cc
+  Most Arduinos have an on-board LED you can control, usually attached to digital pin 13.
+  In addition connect external LED to 
+	- digital pin 7 (red one)
+	- digital pin 8 (grean one)
+
+  Terminal commands:
+  <n> - set the brightness the on-board LED.
+  c<n> - set the brightness the red LED
+  z<n> - set the brightness the green LED
+
+  when <n> is the brightness percentage value, a number between 0 and 100.
 
   This example code is in the public domain.
-
-  modified 8 May 2014
-  by Scott Fitzgerald
  */
 
 #include "DigitalPulse.h"
