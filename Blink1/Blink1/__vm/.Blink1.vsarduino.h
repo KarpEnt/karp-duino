@@ -66,7 +66,9 @@ extern "C" void __cxa_pure_virtual() {;}
 #define portOutputRegister(P)
 #define portInputRegister(P)
 #define portModeRegister(P)
-#include <..\Blink1\Blink1.ino>
+#include <..\Blink1\BrightnessDemo.ino>
 #include <..\Blink1\DigitalPulse.cpp>
 #include <..\Blink1\DigitalPulse.h>
+#include <..\Blink1\Resources.h>
+#include <..\Blink1\eLedDigitalOutput.h>
 #endif

@@ -1,17 +1,17 @@
 /*
-  Blink1
+  BrightnessDemo:
   Turns on an LED with brightness defined by console command.
 
   Most Arduinos have an on-board LED you can control, usually attached to digital pin 13.
-  In addition connect external LED to 
+  In addition connect external LED to :
 	- digital pin 7 (red one)
 	- digital pin 8 (grean one)
-
+  See attached schema for details.
+	
   Terminal commands:
-  <n> - set the brightness the on-board LED.
-  c<n> - set the brightness the red LED
-  z<n> - set the brightness the green LED
-
+	<n> - set the brightness the on-board LED.
+	c<n> - set the brightness the red LED
+	z<n> - set the brightness the green LED
   when <n> is the brightness percentage value, a number between 0 and 100.
 
   This example code is in the public domain.
@@ -56,7 +56,7 @@ void loop() {
 		if (period >= 0 && period <= 100)
 		{
 			DigitalPulse.SetPulseDuration(period / 100.0);
-			Serial.println("> Wypelnienie impulsu ustawione na " + (String)period + "%");
+			Serial.println(promptMsg + infoMsg + (String)period + "%");
 		}
 		else
 		{
