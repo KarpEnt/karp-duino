@@ -82,6 +82,7 @@
   <ItemGroup>
     <ClInclude Include="DigitalPulse.h" />
     <ClInclude Include="eLedDigitalOutput.h" />
+    <ClInclude Include="Resources.h" />
     <ClInclude Include="__vm\.Blink1.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>

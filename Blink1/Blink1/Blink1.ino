@@ -17,11 +17,12 @@
   This example code is in the public domain.
  */
 
+//#define LANG_POLISH
+
+#include "Resources.h"
 #include "DigitalPulse.h"
 
 unsigned long nowMs = 0;
-String timeMsg = "Czas: ";
-String errorMsg = "Podaj wypelnienie impulsu w procentach <0..100>.";
 
 // the setup function runs once when you press reset or power the board
 void setup() {
