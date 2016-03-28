@@ -1,4 +1,4 @@
 # karp-duino
  Educational project for Arduino Yún
  
- TODO: Initial project configuration for VisualStudio 2015.
+ Please see web page https://karpent.github.io/karp-duino/ for project information.
